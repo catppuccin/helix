@@ -1,0 +1,89 @@
+attribute = "blue"
+keyword = "blue"
+"keyword.directive" = "apricot" # -- preprocessor comments (#if in C)
+namespace = "honey"
+punctuation = "white"
+"punctuation.delimiter" = "blue"
+operator = "blue"
+special = "honey"
+variable.other.member = "mint"
+variable = "almond"
+"variable.parameter" = { fg = "lavender" }
+"variable.builtin" = "mint"
+type = "blue"
+"type.builtin" = "white" 
+constructor = "blue"
+function = "red"
+"function.macro" = "mint"
+"function.builtin" = "blue"
+tag = "almond"
+comment = "sirocco"
+constant = "white"
+"constant.builtin" = "mint"
+string = "mint"
+"constant.numeric" = "blue"
+"constant.character.escape" = "honey"
+# used for lifetimes
+label = "honey"
+
+"markup.heading" = "lilac"
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.link.url" = { fg = "silver", modifiers = ["underlined"] }
+"markup.link.text" = "almond"
+"markup.raw" = "almond"
+
+"diff.plus" = "#35bf86"
+"diff.minus" = "#f22c86"
+"diff.delta" = "#6f44f0"
+
+"ui.background" = { bg = "black" }
+"ui.linenr" = { fg = "comet" }
+"ui.linenr.selected" = { fg = "lilac" }
+"ui.statusline" = { fg = "black", bg = "blue" }
+"ui.statusline.inactive" = { fg = "lavender", bg = "revolver" }
+"ui.popup" = { bg = "revolver" }
+"ui.window" = { fg = "bossanova" }
+"ui.help" = { bg = "#7958DC", fg = "#171452" }
+
+"ui.text" = { fg = "lavender" }
+"ui.text.focus" = { fg = "white" }
+
+"ui.selection" = { bg = "#540099" }
+"ui.selection.primary" = { bg = "#540099" }
+"ui.cursor.select" = { bg = "delta" }
+"ui.cursor.insert" = { bg = "white" }
+"ui.cursor.match" = { fg = "#212121", bg = "#6C6999" }
+"ui.cursor" = { modifiers = ["reversed"] }
+"ui.highlight" = { bg = "bossanova" }
+
+"ui.menu.selected" = { fg = "revolver", bg = "white" }
+
+diagnostic = { modifiers = ["underlined"] }
+
+warning = "lightning"
+error = "apricot"
+info = "delta"
+hint = "silver"
+
+[palette]
+black = "#1E1E2E"
+white = "#D9E0EE"
+blue = "#96CDFB"
+lilac = "#DDb6F2"
+lavender = "#F5C2E7"
+comet = "#6E6C7E"
+bossanova = "#E8A2AF"
+midnight = "#E8A2AF"
+revolver = "#988BA2"
+
+silver = "#C3BAC6"
+sirocco = "#988BA2"
+mint = "#ABE9B3"
+almond = "#F8BD96"
+chamois = "#FAE3B0"
+honey = "#F8BD96"
+
+apricot = "#F28FAD"
+lightning = "#FAE3B0"
+delta = "#C9CBFF"
