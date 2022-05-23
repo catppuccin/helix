@@ -1,63 +1,64 @@
 attribute = "blue"
 keyword = "blue"
-"keyword.directive" = "apricot" # -- preprocessor comments (#if in C)
-namespace = "honey"
+"keyword.directive" = "red" # -- preprocessor comments (#if in C)
+namespace = "peach"
 punctuation = "white"
 "punctuation.delimiter" = "blue"
 operator = "blue"
-special = "honey"
-variable.other.member = "mint"
-variable = "almond"
-"variable.parameter" = { fg = "lavender" }
-"variable.builtin" = "mint"
+special = "peach"
+variable.other.member = "green"
+variable = "peach"
+"variable.parameter" = { fg = "pink" }
+"variable.builtin" = "green"
 type = "blue"
-"type.builtin" = "white" 
+"type.builtin" = "white"
 constructor = "blue"
 function = "red"
-"function.macro" = "mint"
+"function.macro" = "green"
 "function.builtin" = "blue"
-tag = "almond"
-comment = "sirocco"
+tag = "peach"
+comment = "gray_1"
 constant = "white"
-"constant.builtin" = "mint"
-string = "mint"
+"constant.builtin" = "green"
+string = "green"
 "constant.numeric" = "blue"
-"constant.character.escape" = "honey"
+"constant.character.escape" = "peach"
 # used for lifetimes
-label = "honey"
+label = "peach"
 
-"markup.heading" = "lilac"
+"markup.heading" = "mauve"
 "markup.bold" = { modifiers = ["bold"] }
 "markup.italic" = { modifiers = ["italic"] }
-"markup.link.url" = { fg = "silver", modifiers = ["underlined"] }
-"markup.link.text" = "almond"
-"markup.raw" = "almond"
+"markup.link.url" = { fg = "gray_2", modifiers = ["underlined"] }
+"markup.link.text" = "peach"
+"markup.raw" = "peach"
 
 "diff.plus" = "#35bf86"
 "diff.minus" = "#f22c86"
 "diff.delta" = "#6f44f0"
 
-"ui.background" = { bg = "black" }
-"ui.linenr" = { fg = "comet" }
-"ui.linenr.selected" = { fg = "lilac" }
-"ui.statusline" = { fg = "black", bg = "blue" }
-"ui.statusline.inactive" = { fg = "lavender", bg = "revolver" }
-"ui.popup" = { bg = "black" }
-"ui.window" = { fg = "bossanova" }
+"ui.background" = { bg = "black_2" }
+"ui.linenr" = { fg = "gray_0" }
+"ui.linenr.selected" = { fg = "mauve" }
+"ui.statusline" = { fg = "black_2", bg = "blue" }
+"ui.statusline.inactive" = { fg = "pink", bg = "gray_1" }
+"ui.popup" = { bg = "black_2" }
+"ui.window" = { fg = "maroon" }
 "ui.help" = { bg = "#7958DC", fg = "#171452" }
 
-"ui.text" = { fg = "lavender" }
+"ui.text" = { fg = "pink" }
 "ui.text.focus" = { fg = "white" }
+"ui.virtual" = { fg = "gray_0" }
 
 "ui.selection" = { bg = "#540099" }
 "ui.selection.primary" = { bg = "#540099" }
-"ui.cursor.select" = { bg = "delta" }
+"ui.cursor.select" = { bg = "lavender" }
 "ui.cursor.insert" = { bg = "white" }
 "ui.cursor.match" = { fg = "#212121", bg = "#6C6999" }
 "ui.cursor" = { modifiers = ["reversed"] }
-"ui.highlight" = { bg = "bossanova" }
+"ui.highlight" = { bg = "maroon" }
 
-"ui.menu.selected" = { fg = "revolver", bg = "white" }
+"ui.menu.selected" = { fg = "gray_1", bg = "white" }
 
 diagnostic = { modifiers = ["underlined"] }
 
@@ -67,23 +68,26 @@ info = "delta"
 hint = "silver"
 
 [palette]
-black = "#1E1E2E"
-white = "#D9E0EE"
+flamingo = "#F2CDCD"
+mauve = "#DDB6F2"
+pink = "#F5C2E7"
+maroon = "#E8A2AF"
+red = "#F28FAD"
+peach = "#F8BD96"
+yellow = "#FAE3B0"
+green = "#ABE9B3"
+teal = "#B5E8E0"
 blue = "#96CDFB"
-lilac = "#DDb6F2"
-lavender = "#F5C2E7"
-comet = "#6E6C7E"
-bossanova = "#E8A2AF"
-midnight = "#E8A2AF"
-revolver = "#988BA2"
+sky = "#89DCEB"
 
-silver = "#C3BAC6"
-sirocco = "#988BA2"
-mint = "#ABE9B3"
-almond = "#F8BD96"
-chamois = "#FAE3B0"
-honey = "#F8BD96"
-
-apricot = "#F28FAD"
-lightning = "#FAE3B0"
-delta = "#C9CBFF"
+black_0 = "#161320"
+black_1 = "#1A1826"
+black_2 = "#1E1E2E"
+black_3 = "#302D41"
+black_4 = "#575268"
+gray_0 = "#6E6C7E"
+gray_1 = "#988BA2"
+gray_2 = "#C3BAC6"
+white = "#D9E0EE"
+lavender = "#C9CBFF"
+rosewater = "#F5E0DC"
