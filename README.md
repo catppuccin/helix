@@ -17,6 +17,12 @@
 
 ## Usage
 
-1. Copy the contents of `catppuccin.toml` into `$HOME/.config/helix/themes/catppuccin.toml`.
-2. Add `theme = "catppuccin"` to your config.toml
-
+1. Copy the contents of the `italics` or `no_italics` folder into `$HOME/.config/helix/themes/catppuccin.toml`.
+2. Choose a palette (latte, frappe, macchiato, mocha) and add `theme = "catppuccin_(palette)"` to your config.toml
+3. Add cursor mode indicator to your config.toml:
+	```toml
+	[editor.cursor-shape]
+	insert = "bar"
+	normal = "block"
+	select = "underline"
+	```
