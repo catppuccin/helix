@@ -68,7 +68,7 @@
 "ui.selection" = { bg = "surface1" }
 
 "ui.cursor" = { fg = "base", bg = "overlay2" }
-"ui.cursor.primary" = { fg = "base", bg = "text" }
+"ui.cursor.primary" = { fg = "base", bg = "rosewater" }
 "ui.cursor.match" = { fg = "peach", modifiers = ["bold"] }
 
 "ui.highlight" = { bg = "surface1" }
