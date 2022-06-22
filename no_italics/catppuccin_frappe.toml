@@ -64,6 +64,7 @@
 
 "ui.virtual" = "overlay0"
 "ui.virtual.ruler" = { bg = "surface0" }
+"ui.virtual.indent-guide" = "surface0"
 
 "ui.selection" = { bg = "surface1" }
 
