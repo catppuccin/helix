@@ -1,0 +1,115 @@
+# Syntax highlighting
+# -------------------
+"type" = "yellow"
+"type.enum.variant" = "peach"
+"constructor" = "sapphire"
+"constant" = "peach"
+"constant.character" = "teal"
+"constant.character.escape" = "pink"
+"string" = "green"
+"string.regexp" = "peach"
+"string.special" = "pink"
+"comment" = {{ fg = "surface2"{style[comments]} }}
+"variable" = "text"
+"variable.parameter" = {{ fg = "maroon"{style[parameters]} }}
+"variable.builtin" = "red"
+"variable.other.member" = "teal"
+"label" = "sapphire" # used for lifetimes
+"punctuation" = "overlay2"
+"keyword" = "mauve"
+"keyword.control.conditional" = {{ fg = "mauve"{style[conditionals]} }}
+"operator" = "sky"
+"function" = "blue"
+"function.builtin" = "peach"
+"function.macro" = "teal"
+"tag" = "mauve"
+"namespace" = {{ fg = "blue"{style[namespaces]} }}
+
+"special" = "blue" # fuzzy highlight
+
+"markup.heading.marker" = {{ fg = "peach", modifiers = ["bold"] }}
+"markup.heading.1" = "lavender"
+"markup.heading.2" = "mauve"
+"markup.heading.3" = "green"
+"markup.heading.4" = "yellow"
+"markup.heading.5" = "pink"
+"markup.heading.6" = "teal"
+"markup.list" = "mauve"
+"markup.bold" = {{ modifiers = ["bold"] }}
+"markup.italic" = {{ modifiers = ["italic"] }}
+"markup.link.url" = {{ fg = "peach", modifiers = ["underlined"] }}
+"markup.link.text" = "blue"
+"markup.raw" = "flamingo"
+
+"diff.plus" = "green"
+"diff.minus" = "red"
+"diff.delta" = "yellow"
+
+# User Interface
+# --------------
+"ui.background" = {{ fg = "text", bg = "base" }}
+
+"ui.linenr" = {{ fg = "surface1" }}
+"ui.linenr.selected" = {{ fg = "lavender" }}
+
+"ui.statusline" = {{ fg = "text", bg = "mantle" }}
+"ui.statusline.inactive" = {{ fg = "surface1", bg = "mantle" }}
+
+"ui.popup" = {{ fg = "text", bg = "surface0" }}
+"ui.window" = {{ fg = "crust" }}
+"ui.help" = {{ fg = "overlay2", bg = "surface0" }}
+
+"ui.text" = "text" 
+"ui.text.focus" = {{fg = "text", modifiers = ["bold"] }}
+
+"ui.virtual" = "overlay0"
+"ui.virtual.ruler" = {{ bg = "surface0" }}
+"ui.virtual.indent-guide" = "surface0"
+
+"ui.selection" = {{ bg = "surface1" }}
+
+"ui.cursor" = {{ fg = "base", bg = "overlay2" }}
+"ui.cursor.primary" = {{ fg = "base", bg = "rosewater" }}
+"ui.cursor.match" = {{ fg = "peach", modifiers = ["bold"] }}
+
+"ui.highlight" = {{ bg = "surface1" }}
+
+"ui.menu" = {{ fg = "overlay2", bg = "surface0" }}
+"ui.menu.selected" = {{ fg = "text", bg = "surface1", modifiers = ["bold"] }}
+
+diagnostic = {{ modifiers = ["underlined"] }}
+
+error = "red"
+warning = "yellow"
+info = "sky"
+hint = "teal"
+
+[palette]
+rosewater = "{palette[rosewater]}"
+flamingo = "{palette[flamingo]}"
+pink = "{palette[pink]}"
+mauve = "{palette[mauve]}"
+red = "{palette[red]}"
+maroon = "{palette[maroon]}"
+peach = "{palette[peach]}"
+yellow = "{palette[yellow]}"
+green = "{palette[green]}"
+teal = "{palette[teal]}"
+sky = "{palette[sky]}"
+sapphire = "{palette[sapphire]}"
+blue = "{palette[blue]}"
+lavender = "{palette[lavender]}"
+
+text = "{palette[text]}"
+subtext1 = "{palette[subtext1]}"
+subtext0 = "{palette[subtext0]}"
+overlay2 = "{palette[overlay2]}"
+overlay1 = "{palette[overlay1]}"
+overlay0 = "{palette[overlay0]}"
+surface2 = "{palette[surface2]}"
+surface1 = "{palette[surface1]}"
+surface0 = "{palette[surface0]}"
+
+base = "{palette[base]}"
+mantle = "{palette[mantle]}"
+crust = "{palette[crust]}"

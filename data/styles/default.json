@@ -1,0 +1,24 @@
+{
+  "comments": [
+    "italic"
+  ],
+  "conditionals": [
+    "italic"
+  ],
+  "loops": null,
+  "functions": null,
+  "keywords": null,
+  "strings": null,
+  "variables": null,
+  "numbers": null,
+  "booleans": null,
+  "properties": null,
+  "types": null,
+  "operators": null,
+  "parameters": [
+    "italic"
+  ],
+  "namespaces": [
+    "italic"
+  ]
+}
