@@ -27,7 +27,7 @@
 
 "special" = "blue" # fuzzy highlight
 
-"markup.heading.marker" = {fg = "peach", modifiers = ["bold"] }
+"markup.heading.marker" = { fg = "peach", modifiers = ["bold"] }
 "markup.heading.1" = "lavender"
 "markup.heading.2" = "mauve"
 "markup.heading.3" = "green"

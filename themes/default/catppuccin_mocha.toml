@@ -9,25 +9,25 @@
 "string" = "green"
 "string.regexp" = "peach"
 "string.special" = "pink"
-"comment" = { fg = "surface2" }
+"comment" = { fg = "surface2", modifiers = ["italic"] }
 "variable" = "text"
-"variable.parameter" = { fg = "maroon" }
+"variable.parameter" = { fg = "maroon", modifiers = ["italic"] }
 "variable.builtin" = "red"
 "variable.other.member" = "teal"
 "label" = "sapphire" # used for lifetimes
 "punctuation" = "overlay2"
 "keyword" = "mauve"
-"keyword.control.conditional" = { fg = "mauve" }
+"keyword.control.conditional" = { fg = "mauve", modifiers = ["italic"] }
 "operator" = "sky"
 "function" = "blue"
 "function.builtin" = "peach"
 "function.macro" = "teal"
 "tag" = "mauve"
-"namespace" = { fg = "blue" }
+"namespace" = { fg = "blue", modifiers = ["italic"] }
 
 "special" = "blue" # fuzzy highlight
 
-"markup.heading.marker" = {fg = "peach", modifiers = ["bold"] }
+"markup.heading.marker" = { fg = "peach", modifiers = ["bold"] }
 "markup.heading.1" = "lavender"
 "markup.heading.2" = "mauve"
 "markup.heading.3" = "green"
