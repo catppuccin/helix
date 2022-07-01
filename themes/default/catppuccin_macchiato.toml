@@ -71,7 +71,7 @@
 
 "ui.selection" = { bg = "surface1" }
 
-"ui.cursor" = { fg = "base", bg = "overlay2" }
+"ui.cursor" = { fg = "base", bg = "secondary_cursor" }
 "ui.cursor.primary" = { fg = "base", bg = "rosewater" }
 "ui.cursor.match" = { fg = "peach", modifiers = ["bold"] }
 
@@ -122,3 +122,4 @@ crust = "#181926"
 
 # derived colors by blending existing palette colors
 cursorline = "#303347"
+secondary_cursor = "#b6a5a7"

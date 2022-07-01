@@ -28,6 +28,11 @@ def load_style(style_name):
 def generate_derived_colors(palette):
     theme_is_light = color_is_bright(palette["base"])
     derived_colors = {}
+
+    derived_colors["secondary_cursor"] = blend_colors(
+        palette["base"], palette["rosewater"], 0.7
+    )
+
     if theme_is_light:
         derived_colors["cursorline"] = blend_colors(
             palette["base"], palette["mantle"], 0.7
@@ -36,6 +41,7 @@ def generate_derived_colors(palette):
         derived_colors["cursorline"] = blend_colors(
             palette["base"], palette["surface0"], 0.64
         )
+
     return derived_colors
 
 
