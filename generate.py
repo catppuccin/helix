@@ -1,5 +1,6 @@
 from pathlib import Path
 import json
+from data.colors import color_is_bright, blend_colors
 
 DIRNAME = Path(__file__).parent
 PALETTES_DIR = DIRNAME / "data" / "palettes"
@@ -24,6 +25,20 @@ def load_style(style_name):
     }
 
 
+def generate_derived_colors(palette):
+    theme_is_light = color_is_bright(palette["base"])
+    derived_colors = {}
+    if theme_is_light:
+        derived_colors["cursorline"] = blend_colors(
+            palette["base"], palette["mantle"], 0.7
+        )
+    else:
+        derived_colors["cursorline"] = blend_colors(
+            palette["base"], palette["surface0"], 0.64
+        )
+    return derived_colors
+
+
 def generate_themes():
     with (DIRNAME / "data" / "template.tmpl").open("r") as f:
         template = f.read()
@@ -41,8 +56,18 @@ def generate_themes():
             with palette_file.open("r") as f:
                 palette = json.load(f)
 
+            derived_colors = generate_derived_colors(palette)
+
             with (TARGET_DIR / style_name / (palette_name + ".toml")).open("w") as f:
-                f.write(template.format(**{"palette": palette, "style": style}))
+                f.write(
+                    template.format(
+                        **{
+                            "palette": palette,
+                            "style": style,
+                            "derived_colors": derived_colors,
+                        }
+                    )
+                )
 
 
 if __name__ == "__main__":

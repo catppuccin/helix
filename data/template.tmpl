@@ -72,6 +72,8 @@
 "ui.cursor.primary" = {{ fg = "base", bg = "rosewater" }}
 "ui.cursor.match" = {{ fg = "peach", modifiers = ["bold"] }}
 
+"ui.cursorline.primary" = {{ bg = "cursorline" }}
+
 "ui.highlight" = {{ bg = "surface1" }}
 
 "ui.menu" = {{ fg = "overlay2", bg = "surface0" }}
@@ -85,6 +87,7 @@ info = "sky"
 hint = "teal"
 
 [palette]
+# catppuccin palette colors
 rosewater = "{palette[rosewater]}"
 flamingo = "{palette[flamingo]}"
 pink = "{palette[pink]}"
@@ -113,3 +116,6 @@ surface0 = "{palette[surface0]}"
 base = "{palette[base]}"
 mantle = "{palette[mantle]}"
 crust = "{palette[crust]}"
+
+# derived colors by blending existing palette colors
+cursorline = "{derived_colors[cursorline]}"
