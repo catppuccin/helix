@@ -4,24 +4,24 @@ from data.colors import color_is_bright, blend_colors
 
 DIRNAME = Path(__file__).parent
 PALETTES_DIR = DIRNAME / "data" / "palettes"
-STYLES_DIR = DIRNAME / "data" / "styles"
+CONFIGS_DIR = DIRNAME / "data" / "configs"
 TARGET_DIR = Path("themes/")
 
 
-def load_style(style_name):
-    with (STYLES_DIR / "default.json").open("r") as f:
-        default_style = json.load(f)
+def load_styles(config_name):
+    with (CONFIGS_DIR / "default.json").open("r") as f:
+        default_config = json.load(f)
 
-    with (STYLES_DIR / (style_name + ".json")).open("r") as f:
-        json_style = json.load(f)
+    with (CONFIGS_DIR / (config_name + ".json")).open("r") as f:
+        json_config = json.load(f)
 
-    merged_style = default_style | json_style
+    merged_styles = default_config["styles"] | json_config["styles"]
 
     return {
         k: (
             ", modifiers = [{}]".format(", ".join(f'"{mod}"' for mod in v)) if v else ""
         )
-        for (k, v) in merged_style.items()
+        for (k, v) in merged_styles.items()
     }
 
 
@@ -49,12 +49,12 @@ def generate_themes():
     with (DIRNAME / "data" / "template.tmpl").open("r") as f:
         template = f.read()
 
-    for style_file in STYLES_DIR.glob("*.json"):
-        style_name = style_file.stem
+    for config_file in CONFIGS_DIR.glob("*.json"):
+        config_name = config_file.stem
 
-        style = load_style(style_name)
+        styles = load_styles(config_name)
 
-        (TARGET_DIR / style_name).mkdir(parents=True, exist_ok=True)
+        (TARGET_DIR / config_name).mkdir(parents=True, exist_ok=True)
 
         for palette_file in PALETTES_DIR.glob("*.json"):
             palette_name = palette_file.stem
@@ -64,12 +64,12 @@ def generate_themes():
 
             derived_colors = generate_derived_colors(palette)
 
-            with (TARGET_DIR / style_name / (palette_name + ".toml")).open("w") as f:
+            with (TARGET_DIR / config_name / (palette_name + ".toml")).open("w") as f:
                 f.write(
                     template.format(
                         **{
                             "palette": palette,
-                            "style": style,
+                            "styles": styles,
                             "derived_colors": derived_colors,
                         }
                     )
