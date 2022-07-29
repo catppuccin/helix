@@ -9,7 +9,7 @@
 "string" = "green"
 "string.regexp" = "peach"
 "string.special" = "pink"
-"comment" = { fg = "surface2", modifiers = ["italic"] }
+"comment" = { fg = "overlay1", modifiers = ["italic"] }
 "variable" = "text"
 "variable.parameter" = { fg = "maroon", modifiers = ["italic"] }
 "variable.builtin" = "red"
