@@ -32,6 +32,11 @@
 	[editor.indent-guides]
 	render = true
 	```
+	
+## Modify themes
+Modfiy the themes by editing the template (`data/template.tmpl`), the palettes (`/data/palettes`) or the configs (`/data/configs`).
+To generate all the themes execute `python generate.py`.
+
 ## 💝 Thanks to
 
 - [Spaxly](https://github.com/Spaxly)
