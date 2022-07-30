@@ -13,7 +13,7 @@
 "string.regexp" = "peach"
 "string.special" = "pink"
 
-"comment" = { fg = "surface2" }
+"comment" = { fg = "overlay1" }
 
 "variable" = "text"
 "variable.parameter" = { fg = "maroon" }
