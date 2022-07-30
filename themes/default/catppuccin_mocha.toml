@@ -2,32 +2,44 @@
 # -------------------
 "type" = "yellow"
 "type.enum.variant" = "peach"
+
 "constructor" = "sapphire"
+
 "constant" = "peach"
 "constant.character" = "teal"
 "constant.character.escape" = "pink"
+
 "string" = "green"
 "string.regexp" = "peach"
 "string.special" = "pink"
-"comment" = { fg = "overlay1" }
+
+"comment" = { fg = "overlay1", modifiers = ["italic"] }
+
 "variable" = "text"
-"variable.parameter" = { fg = "maroon" }
+"variable.parameter" = { fg = "maroon", modifiers = ["italic"] }
 "variable.builtin" = "red"
 "variable.other.member" = "teal"
+
 "label" = "sapphire" # used for lifetimes
+
 "punctuation" = "overlay2"
+
 "keyword" = "mauve"
-"keyword.control.conditional" = { fg = "mauve" }
+"keyword.control.conditional" = { fg = "mauve", modifiers = ["italic"] }
+
 "operator" = "sky"
+
 "function" = "blue"
 "function.builtin" = "peach"
 "function.macro" = "teal"
+
 "tag" = "mauve"
-"namespace" = { fg = "blue" }
+
+"namespace" = { fg = "blue", modifiers = ["italic"] }
 
 "special" = "blue" # fuzzy highlight
 
-"markup.heading.marker" = {fg = "peach", modifiers = ["bold"] }
+"markup.heading.marker" = { fg = "peach", modifiers = ["bold"] }
 "markup.heading.1" = "lavender"
 "markup.heading.2" = "mauve"
 "markup.heading.3" = "green"
@@ -52,15 +64,18 @@
 "ui.linenr" = { fg = "surface1" }
 "ui.linenr.selected" = { fg = "lavender" }
 
-"ui.statusline" = { fg = "text", bg = "mantle" }
-"ui.statusline.inactive" = { fg = "surface1", bg = "mantle" }
+"ui.statusline" = { fg = "overlay1", bg = "surface0" }
+"ui.statusline.inactive" = { fg = "overlay1", bg = "mantle" }
+"ui.statusline.normal" = { fg = "surface0", bg = "lavender", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "surface0", bg = "green", modifiers = ["bold"]  }
+"ui.statusline.select" = { fg = "surface0", bg = "flamingo", modifiers = ["bold"]  }
 
 "ui.popup" = { fg = "text", bg = "surface0" }
 "ui.window" = { fg = "crust" }
 "ui.help" = { fg = "overlay2", bg = "surface0" }
 
 "ui.text" = "text" 
-"ui.text.focus" = {fg = "text", modifiers = ["bold"] }
+"ui.text.focus" = { fg = "text", bg = "surface0", modifiers = ["bold"] }
 
 "ui.virtual" = "overlay0"
 "ui.virtual.ruler" = { bg = "surface0" }
@@ -68,9 +83,11 @@
 
 "ui.selection" = { bg = "surface1" }
 
-"ui.cursor" = { fg = "base", bg = "overlay2" }
+"ui.cursor" = { fg = "base", bg = "secondary_cursor" }
 "ui.cursor.primary" = { fg = "base", bg = "rosewater" }
 "ui.cursor.match" = { fg = "peach", modifiers = ["bold"] }
+
+"ui.cursorline.primary" = { bg = "cursorline" }
 
 "ui.highlight" = { bg = "surface1" }
 
@@ -85,31 +102,36 @@ info = "sky"
 hint = "teal"
 
 [palette]
-rosewater = "#f4dbd6"
-flamingo = "#f0c6c6"
-pink = "#f5bde6"
-mauve = "#c6a0f6"
-red = "#ed8796"
-maroon = "#ee99a0"
-peach = "#f5a97f"
-yellow = "#eed49f"
-green = "#a6da95"
-teal = "#8bd5ca"
-sky = "#91d7e3"
-sapphire = "#7dc4e4"
-blue = "#8aadf4"
-lavender = "#b7bdf8"
+# catppuccin palette colors
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+mauve = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+lavender = "#b4befe"
 
-text = "#cad3f5"
-subtext1 = "#b8c0e0"
-subtext0 = "#a5adcb"
-overlay2 = "#939ab7"
-overlay1 = "#8087a2"
-overlay0 = "#6e738d"
-surface2 = "#5b6078"
-surface1 = "#494d64"
-surface0 = "#363a4f"
+text = "#cdd6f4"
+subtext1 = "#bac2de"
+subtext0 = "#a6adc8"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#313244"
 
-base = "#24273a"
-mantle = "#1e2030"
-crust = "#181926"
+base = "#1e1e2e"
+mantle = "#181825"
+crust = "#11111b"
+
+# derived colors by blending existing palette colors
+cursorline = "#2a2b3c"
+secondary_cursor = "#b5a6a8"

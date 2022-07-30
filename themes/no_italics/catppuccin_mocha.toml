@@ -2,32 +2,44 @@
 # -------------------
 "type" = "yellow"
 "type.enum.variant" = "peach"
+
 "constructor" = "sapphire"
+
 "constant" = "peach"
 "constant.character" = "teal"
 "constant.character.escape" = "pink"
+
 "string" = "green"
 "string.regexp" = "peach"
 "string.special" = "pink"
+
 "comment" = { fg = "overlay1" }
+
 "variable" = "text"
 "variable.parameter" = { fg = "maroon" }
 "variable.builtin" = "red"
 "variable.other.member" = "teal"
+
 "label" = "sapphire" # used for lifetimes
+
 "punctuation" = "overlay2"
+
 "keyword" = "mauve"
 "keyword.control.conditional" = { fg = "mauve" }
+
 "operator" = "sky"
+
 "function" = "blue"
 "function.builtin" = "peach"
 "function.macro" = "teal"
+
 "tag" = "mauve"
+
 "namespace" = { fg = "blue" }
 
 "special" = "blue" # fuzzy highlight
 
-"markup.heading.marker" = {fg = "peach", modifiers = ["bold"] }
+"markup.heading.marker" = { fg = "peach", modifiers = ["bold"] }
 "markup.heading.1" = "lavender"
 "markup.heading.2" = "mauve"
 "markup.heading.3" = "green"
@@ -52,15 +64,18 @@
 "ui.linenr" = { fg = "surface1" }
 "ui.linenr.selected" = { fg = "lavender" }
 
-"ui.statusline" = { fg = "text", bg = "mantle" }
-"ui.statusline.inactive" = { fg = "surface1", bg = "mantle" }
+"ui.statusline" = { fg = "overlay1", bg = "surface0" }
+"ui.statusline.inactive" = { fg = "overlay1", bg = "mantle" }
+"ui.statusline.normal" = { fg = "surface0", bg = "lavender", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "surface0", bg = "green", modifiers = ["bold"]  }
+"ui.statusline.select" = { fg = "surface0", bg = "flamingo", modifiers = ["bold"]  }
 
 "ui.popup" = { fg = "text", bg = "surface0" }
 "ui.window" = { fg = "crust" }
 "ui.help" = { fg = "overlay2", bg = "surface0" }
 
 "ui.text" = "text" 
-"ui.text.focus" = {fg = "text", modifiers = ["bold"] }
+"ui.text.focus" = { fg = "text", bg = "surface0", modifiers = ["bold"] }
 
 "ui.virtual" = "overlay0"
 "ui.virtual.ruler" = { bg = "surface0" }
@@ -68,9 +83,11 @@
 
 "ui.selection" = { bg = "surface1" }
 
-"ui.cursor" = { fg = "base", bg = "overlay2" }
+"ui.cursor" = { fg = "base", bg = "secondary_cursor" }
 "ui.cursor.primary" = { fg = "base", bg = "rosewater" }
 "ui.cursor.match" = { fg = "peach", modifiers = ["bold"] }
+
+"ui.cursorline.primary" = { bg = "cursorline" }
 
 "ui.highlight" = { bg = "surface1" }
 
@@ -85,6 +102,7 @@ info = "sky"
 hint = "teal"
 
 [palette]
+# catppuccin palette colors
 rosewater = "#f5e0dc"
 flamingo = "#f2cdcd"
 pink = "#f5c2e7"
@@ -113,3 +131,7 @@ surface0 = "#313244"
 base = "#1e1e2e"
 mantle = "#181825"
 crust = "#11111b"
+
+# derived colors by blending existing palette colors
+cursorline = "#2a2b3c"
+secondary_cursor = "#b5a6a8"
