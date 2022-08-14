@@ -11,7 +11,7 @@
     <a href="https://github.com/catppuccin/helix/contributors"><img src="https://img.shields.io/github/contributors/catppuccin/dunst?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
 </p>
 
-![helix preview](assets/preview.png)
+![helix preview](assets/preview.webp)
 
 ## Usage
 
