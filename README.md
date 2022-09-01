@@ -15,9 +15,9 @@
 
 ## Usage
 
-1. Copy the contents of the `themes/default` or `themes/no_italics` folder into `$HOME/.config/helix/themes/`.
+1. Helix itself includes the default variant of the theme. For other variants, copy the contents of the `themes/...` folder into `$HOME/.config/helix/themes/` to overwrite.
 2. Choose a palette (latte, frappe, macchiato, mocha) and add `theme = "catppuccin_(palette)"` to your config.toml
-3. (Optional) modify your `$HOME/.config/helix/config.toml` to activate features (might require Helix build from master):
+3. (Optional) modify your `$HOME/.config/helix/config.toml` to activate features:
 	```toml
 	[editor]
 	line-number = "relative"
@@ -34,6 +34,7 @@
 	```
 	
 ## Modify themes
+
 Modfiy the themes by editing the template (`data/template.tmpl`), the palettes (`/data/palettes`) or the configs (`/data/configs`).
 To generate all the themes execute `python generate.py`.
 
