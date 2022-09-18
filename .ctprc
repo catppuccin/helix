@@ -1,6 +1,0 @@
-# A Catppuccin RC file for Helix. In beta, specs may change.
-app_name         : Helix
-path_name        : hx
-install_location : .
-install_files:
-  - themes/*

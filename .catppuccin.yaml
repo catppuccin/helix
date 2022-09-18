@@ -1,0 +1,42 @@
+app_name: helix # name of app
+binary_name: hx # name of executably
+installation: # Install instructions
+  location:
+    macos: ~/.config/helix/
+    linux: ~/.config/helix/
+    windows: "%appdata%/helix/"
+  flavours: # Specific flavours
+    all:
+      default:
+        - themes/default
+      additional:
+        no-italics:
+          - themes/no_italics
+    latte:
+      default: # Default and no-italic variants
+        - themes/default/catppuccin_latte.toml
+      additional:
+        no-italics:
+          - themes/no_italics/catppuccin_latte.toml
+    frappe:
+      default:       
+        - themes/default/catppuccin_frappe.toml
+      additional:
+        no-italics:
+          - themes/no_italics/catppuccin_frappe.toml
+    macchiato:
+      default:
+        - themes/default/catppuccin_macchiato.toml
+      additional:
+        no-italics:
+          - themes/no_italics/catppuccin_macchiato.toml
+    mocha:
+      default:
+        - themes/default/catppuccin_mocha.toml
+      additional:
+        no-italics:
+          - themes/no_italics/catppuccin_mocha.toml
+  to: themes/ # Install location
+  one_flavour: false # Only one flavour?
+  modes: # Additional modes
+    - no-italics
