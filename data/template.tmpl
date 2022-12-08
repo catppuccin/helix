@@ -94,7 +94,10 @@
 "ui.menu" = {{ fg = "overlay2", bg = "surface0" }}
 "ui.menu.selected" = {{ fg = "text", bg = "surface1", modifiers = ["bold"] }}
 
-diagnostic = {{ modifiers = ["underlined"] }}
+"diagnostic.error" = {{ fg = "red", underline = {{ color = "red", style = "curl" }} }}
+"diagnostic.warn" = {{ fg = "yellow", underline = {{ color = "yellow", style = "curl" }} }}
+"diagnostic.info" = {{ fg = "sky", underline = {{ color = "sky", style = "curl" }} }}
+"diagnostic.hint" = {{ fg = "teal", underline = {{ color = "teal", style = "curl" }} }}
 
 error = "red"
 warning = "yellow"
