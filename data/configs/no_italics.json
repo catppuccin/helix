@@ -3,6 +3,9 @@
     "comments": null,
     "conditionals": null,
     "parameters": null,
-    "namespaces": null
+    "namespaces": null,
+    "markup_link_url": [
+      "underlined"
+    ]
   }
 }
