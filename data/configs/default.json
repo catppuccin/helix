@@ -11,6 +11,10 @@
     ],
     "namespaces": [
       "italic"
+    ],
+    "markup_link_url": [
+      "italic",
+      "underlined"
     ]
   }
 }
