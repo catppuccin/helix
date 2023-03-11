@@ -79,12 +79,13 @@
 "ui.bufferline.active" = { fg = "text", bg = "base", modifiers = ["bold", "italic"] }
 "ui.bufferline.background" = { bg = "surface0" }
 
-"ui.text" = "text" 
+"ui.text" = "text"
 "ui.text.focus" = { fg = "text", bg = "surface0", modifiers = ["bold"] }
 
 "ui.virtual" = "overlay0"
 "ui.virtual.ruler" = { bg = "surface0" }
 "ui.virtual.indent-guide" = "surface0"
+"ui.virtual.inlay-hint" = { fg = "surface1", bg = "mantle" }
 
 "ui.selection" = { bg = "surface1" }
 
