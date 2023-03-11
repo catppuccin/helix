@@ -35,6 +35,7 @@
 "function.macro" = "mauve"
 
 "tag" = "mauve"
+"attribute" = "blue"
 
 "namespace" = { fg = "blue", modifiers = ["italic"] }
 
@@ -79,7 +80,7 @@
 "ui.bufferline.active" = { fg = "text", bg = "base", modifiers = ["bold", "italic"] }
 "ui.bufferline.background" = { bg = "surface0" }
 
-"ui.text" = "text" 
+"ui.text" = "text"
 "ui.text.focus" = { fg = "text", bg = "surface0", modifiers = ["bold"] }
 
 "ui.virtual" = "overlay0"
