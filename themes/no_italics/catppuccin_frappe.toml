@@ -79,7 +79,7 @@
 "ui.bufferline.active" = { fg = "text", bg = "base", modifiers = ["bold", "italic"] }
 "ui.bufferline.background" = { bg = "surface0" }
 
-"ui.text" = "text" 
+"ui.text" = "text"
 "ui.text.focus" = { fg = "text", bg = "surface0", modifiers = ["bold"] }
 
 "ui.virtual" = "overlay0"
@@ -91,6 +91,14 @@
 "ui.cursor" = { fg = "base", bg = "secondary_cursor" }
 "ui.cursor.primary" = { fg = "base", bg = "rosewater" }
 "ui.cursor.match" = { fg = "peach", modifiers = ["bold"] }
+
+"ui.cursor.primary.normal" = { fg = "base", bg = "lavender" }
+"ui.cursor.primary.insert" = { fg = "base", bg = "green" }
+"ui.cursor.primary.select" = { fg = "base", bg = "flamingo" }
+
+"ui.cursor.normal" = { fg = "base", bg = "secondary_cursor_normal" }
+"ui.cursor.insert" = { fg = "base", bg = "secondary_cursor_insert" }
+"ui.cursor.select" = { fg = "base", bg = "secondary_cursor" }
 
 "ui.cursorline.primary" = { bg = "cursorline" }
 
@@ -143,3 +151,5 @@ crust = "#232634"
 # derived colors by blending existing palette colors
 cursorline = "#3b3f52"
 secondary_cursor = "#b8a5a6"
+secondary_cursor_normal = "#9193be"
+secondary_cursor_insert = "#83a275"
