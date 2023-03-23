@@ -34,6 +34,7 @@
 "function.macro" = "mauve"
 
 "tag" = "mauve"
+"attribute" = "blue"
 
 "namespace" = { fg = "blue", modifiers = ["italic"] }
 
