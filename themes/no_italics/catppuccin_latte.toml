@@ -94,6 +94,14 @@
 "ui.cursor.primary" = { fg = "base", bg = "rosewater" }
 "ui.cursor.match" = { fg = "peach", modifiers = ["bold"] }
 
+"ui.cursor.primary.normal" = { fg = "base", bg = "lavender" }
+"ui.cursor.primary.insert" = { fg = "base", bg = "green" }
+"ui.cursor.primary.select" = { fg = "base", bg = "flamingo" }
+
+"ui.cursor.normal" = { fg = "base", bg = "secondary_cursor_normal" }
+"ui.cursor.insert" = { fg = "base", bg = "secondary_cursor_insert" }
+"ui.cursor.select" = { fg = "base", bg = "secondary_cursor" }
+
 "ui.cursorline.primary" = { bg = "cursorline" }
 
 "ui.highlight" = { bg = "surface1", modifiers = ["bold"] }
@@ -145,3 +153,5 @@ crust = "#dce0e8"
 # derived colors by blending existing palette colors
 cursorline = "#e9ebf1"
 secondary_cursor = "#e2a99e"
+secondary_cursor_normal = "#98a7fb"
+secondary_cursor_insert = "#75b868"

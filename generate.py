@@ -33,6 +33,14 @@ def generate_derived_colors(palette):
         palette["base"], palette["rosewater"], 0.7
     )
 
+    derived_colors["secondary_cursor_normal"] = blend_colors(
+        palette["base"], palette["lavender"], 0.7
+    )
+
+    derived_colors["secondary_cursor_insert"] = blend_colors(
+        palette["base"], palette["green"], 0.7
+    )
+
     if theme_is_light:
         derived_colors["cursorline"] = blend_colors(
             palette["base"], palette["mantle"], 0.7
