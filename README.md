@@ -40,7 +40,7 @@ To generate all the themes execute `python generate.py`.
 
 ## 💝 Thanks to
 
-- [Spaxly](https://github.com/Spaxly)
+- [ohxxm](https://github.com/ohxxm)
 
 &nbsp;
 
