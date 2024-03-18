@@ -17,7 +17,8 @@
 
 1. Helix itself includes the default variant of the theme. For other variants, copy the contents of the `themes/...` folder into `$HOME/.config/helix/themes/` to overwrite.
 2. Choose a palette (latte, frappe, macchiato, mocha) and add `theme = "catppuccin_(palette)"` to your config.toml
-3. (Optional) modify your `$HOME/.config/helix/config.toml` to activate features:
+3. Turn on terminal True Colors by setting `[editor] true-color = true`
+4. (Optional) modify your `$HOME/.config/helix/config.toml` to activate features:
 	```toml
 	[editor]
 	line-number = "relative"
