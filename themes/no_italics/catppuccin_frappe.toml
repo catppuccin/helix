@@ -36,7 +36,7 @@
 "tag" = "mauve"
 "attribute" = "blue"
 
-"namespace" = { fg = "blue" }
+"namespace" = { fg = "yellow" }
 
 "special" = "blue" # fuzzy highlight
 
