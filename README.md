@@ -32,8 +32,21 @@
 	[editor.indent-guides]
 	render = true
 	```
+
+## Customizations
+
+You can customize the themes by inheriting your preferred flavor and applying your own modifications. For example, to create a pure black theme based on `catppuccin_mocha`, create a new file in `$HOME/.config/helix/themes/` with the following content:
+
+```toml
+inherits = "catppuccin_mocha"
+
+[palette]
+base = "#000000"
+mantle = "#010101"
+crust = "#020202"
+```
 	
-## Modify themes
+## Building the themes
 
 Modfiy the themes by editing the template (`data/template.tmpl`), the palettes (`/data/palettes`) or the configs (`/data/configs`).
 To generate all the themes execute `python generate.py`.
