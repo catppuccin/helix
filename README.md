@@ -45,6 +45,21 @@ base = "#000000"
 mantle = "#010101"
 crust = "#020202"
 ```
+
+## FAQ
+
+### The theme isn't loading or working properly
+
+Make sure the theme is in the correct directory and the `theme` field in your `config.toml` is set correctly.
+
+If the theme is still not working, it may be due to true color support. Make sure your terminal emulator supports true color and is configured correctly. If you are certain that your terminal emulator supports true color, then you can try overriding Helix's true color detection in your config file as follows:
+
+```toml
+[editor]
+true-color = true
+```
+
+If you still can't get the theme to work, please [open an issue](https://github.com/catppuccin/helix/issues)!
 	
 ## Building the themes
 
