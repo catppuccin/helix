@@ -1,19 +1,22 @@
 # Syntax highlighting
 # -------------------
+"attribute" = "yellow"
+
 "type" = "yellow"
+"type.enum.variant" = "teal"
 
 "constructor" = "sapphire"
 
 "constant" = "peach"
-"constant.builtin" = "peach"
 "constant.character" = "teal"
 "constant.character.escape" = "pink"
 
 "string" = "green"
-"string.regexp" = "peach"
+"string.regexp" = "pink"
 "string.special" = "blue"
+"string.special.symbol" = "red"
 
-"comment" = {{ fg = "overlay1"{styles[comments]} }}
+"comment" = {{ fg = "overlay2"{styles[comments]} }}
 
 "variable" = "text"
 "variable.parameter" = {{ fg = "maroon"{styles[parameters]} }}
@@ -34,7 +37,6 @@
 "function.macro" = "mauve"
 
 "tag" = "mauve"
-"attribute" = "blue"
 
 "namespace" = {{ fg = "yellow"{styles[namespaces]} }}
 
