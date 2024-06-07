@@ -63,8 +63,9 @@ If you still can't get the theme to work, please [open an issue](https://github.
 	
 ## Building the themes
 
-Modfiy the themes by editing the template (`data/template.tmpl`), the palettes (`/data/palettes`) or the configs (`/data/configs`).
-To generate all the themes execute `python generate.py`.
+Catppuccin for Helix uses [Whiskers](https://github.com/catppuccin/whiskers).
+
+Modify the themes by editing [helix.tera](./helix.tera), then run `whiskers helix.tera` (or `just build`).
 
 ## 💝 Thanks to
 
