@@ -57,7 +57,7 @@ whiskers:
 "function" = "blue"
 "function.macro" = "mauve"
 
-"tag" = "mauve"
+"tag" = "blue"
 
 "namespace" = { fg = "yellow"{{ self::modifiers() }} }
 
