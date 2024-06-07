@@ -1,3 +1,24 @@
+---
+whiskers:
+  version: "2.3.0"
+  matrix:
+    - flavor
+    - variant: ["default", "no_italics"]
+  filename: "themes/{{ variant }}/catppuccin_{{ flavor.identifier }}.toml"
+---
+
+{%- macro modifiers(other=false) -%}
+{%- if not other %}{% set other = [] %}{% endif -%}
+{%- set base = [] -%}
+{%- if variant == "default" -%}
+{%- set base = ["italic"] -%}
+{%- endif -%}
+{%- set all = base | concat(with=other) -%}
+{%- if all | length > 0 -%}
+, modifiers = [{% for mod in all %}"{{ mod }}"{% if not loop.last %}, {% endif %}{% endfor %}]
+{%- endif -%}
+{%- endmacro -%}
+
 # Syntax highlighting
 # -------------------
 "attribute" = "yellow"
@@ -16,10 +37,10 @@
 "string.special" = "blue"
 "string.special.symbol" = "red"
 
-"comment" = { fg = "overlay2" }
+"comment" = { fg = "overlay2"{{ self::modifiers() }} }
 
 "variable" = "text"
-"variable.parameter" = { fg = "maroon" }
+"variable.parameter" = { fg = "maroon"{{ self::modifiers() }} }
 "variable.builtin" = "red"
 "variable.other.member" = "teal"
 
@@ -29,7 +50,7 @@
 "punctuation.special" = "sky"
 
 "keyword" = "mauve"
-"keyword.control.conditional" = { fg = "mauve" }
+"keyword.control.conditional" = { fg = "mauve"{{ self::modifiers() }} }
 
 "operator" = "sky"
 
@@ -38,7 +59,7 @@
 
 "tag" = "mauve"
 
-"namespace" = { fg = "yellow" }
+"namespace" = { fg = "yellow"{{ self::modifiers() }} }
 
 "special" = "blue" # fuzzy highlight
 
@@ -52,7 +73,7 @@
 "markup.list" = "mauve"
 "markup.bold" = { modifiers = ["bold"] }
 "markup.italic" = { modifiers = ["italic"] }
-"markup.link.url" = { fg = "blue", modifiers = ["underlined"] }
+"markup.link.url" = { fg = "blue"{{ self::modifiers(other=["underlined"]) }} }
 "markup.link.text" = "blue"
 "markup.raw" = "flamingo"
 
@@ -123,34 +144,11 @@ info = "sky"
 hint = "teal"
 
 [palette]
-rosewater = "#f4dbd6"
-flamingo = "#f0c6c6"
-pink = "#f5bde6"
-mauve = "#c6a0f6"
-red = "#ed8796"
-maroon = "#ee99a0"
-peach = "#f5a97f"
-yellow = "#eed49f"
-green = "#a6da95"
-teal = "#8bd5ca"
-sky = "#91d7e3"
-sapphire = "#7dc4e4"
-blue = "#8aadf4"
-lavender = "#b7bdf8"
-text = "#cad3f5"
-subtext1 = "#b8c0e0"
-subtext0 = "#a5adcb"
-overlay2 = "#939ab7"
-overlay1 = "#8087a2"
-overlay0 = "#6e738d"
-surface2 = "#5b6078"
-surface1 = "#494d64"
-surface0 = "#363a4f"
-base = "#24273a"
-mantle = "#1e2030"
-crust = "#181926"
+{%- for identifier, color in flavor.colors %}
+{{ identifier }} = "#{{ color.hex }}"
+{%- endfor %}
 
-cursorline = "#303347"
-secondary_cursor = "#b6a6a7"
-secondary_cursor_normal = "#8b91bf"
-secondary_cursor_insert = "#80a57a"
+cursorline = "#{% if flavor.dark %}{{ surface0 | mix(color=base, amount=0.64) | get(key="hex") }}{% else %}{{ mantle | mix(color=base, amount=0.7) | get(key="hex") }}{% endif %}"
+secondary_cursor = "#{{ rosewater | mix(color=base, amount=0.7) | get(key="hex") }}"
+secondary_cursor_normal = "#{{ lavender | mix(color=base, amount=0.7) | get(key="hex") }}"
+secondary_cursor_insert = "#{{ green | mix(color=base, amount=0.7) | get(key="hex") }}"

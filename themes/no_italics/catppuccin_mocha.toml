@@ -123,7 +123,6 @@ info = "sky"
 hint = "teal"
 
 [palette]
-# catppuccin palette colors
 rosewater = "#f5e0dc"
 flamingo = "#f2cdcd"
 pink = "#f5c2e7"
@@ -138,7 +137,6 @@ sky = "#89dceb"
 sapphire = "#74c7ec"
 blue = "#89b4fa"
 lavender = "#b4befe"
-
 text = "#cdd6f4"
 subtext1 = "#bac2de"
 subtext0 = "#a6adc8"
@@ -148,13 +146,11 @@ overlay0 = "#6c7086"
 surface2 = "#585b70"
 surface1 = "#45475a"
 surface0 = "#313244"
-
 base = "#1e1e2e"
 mantle = "#181825"
 crust = "#11111b"
 
-# derived colors by blending existing palette colors
 cursorline = "#2a2b3c"
 secondary_cursor = "#b5a6a8"
 secondary_cursor_normal = "#878ec0"
-secondary_cursor_insert = "#7da87e"
+secondary_cursor_insert = "#7ea87f"
