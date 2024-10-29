@@ -42,7 +42,7 @@ whiskers:
 "variable" = "text"
 "variable.parameter" = { fg = "maroon"{{ self::modifiers() }} }
 "variable.builtin" = "red"
-"variable.other.member" = "teal"
+"variable.other.member" = "blue"
 
 "label" = "sapphire" # used for lifetimes
 
