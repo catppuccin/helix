@@ -71,6 +71,8 @@ whiskers:
 "markup.heading.5" = "pink"
 "markup.heading.6" = "teal"
 "markup.list" = "mauve"
+"markup.list.unchecked" = "overlay2"
+"markup.list.checked" = "green"
 "markup.bold" = { modifiers = ["bold"] }
 "markup.italic" = { modifiers = ["italic"] }
 "markup.link.url" = { fg = "blue"{{ self::modifiers(other=["underlined"]) }} }
