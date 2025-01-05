@@ -63,21 +63,20 @@ whiskers:
 
 "special" = "blue" # fuzzy highlight
 
-"markup.heading.marker" = { fg = "peach", modifiers = ["bold"] }
-"markup.heading.1" = "lavender"
-"markup.heading.2" = "mauve"
-"markup.heading.3" = "green"
-"markup.heading.4" = "yellow"
-"markup.heading.5" = "pink"
-"markup.heading.6" = "teal"
-"markup.list" = "mauve"
+"markup.heading.1" = "red"
+"markup.heading.2" = "peach"
+"markup.heading.3" = "yellow"
+"markup.heading.4" = "green"
+"markup.heading.5" = "blue"
+"markup.heading.6" = "mauve"
+"markup.list" = "teal"
 "markup.list.unchecked" = "overlay2"
 "markup.list.checked" = "green"
-"markup.bold" = { modifiers = ["bold"] }
-"markup.italic" = { modifiers = ["italic"] }
+"markup.bold" = { fg = "red", modifiers = ["bold"] }
+"markup.italic" = { fg = "red", modifiers = ["italic"] }
 "markup.link.url" = { fg = "blue"{{ self::modifiers(other=["underlined"]) }} }
-"markup.link.text" = "blue"
-"markup.raw" = "flamingo"
+"markup.link.text" = "lavender"
+"markup.raw" = "green"
 
 "diff.plus" = "green"
 "diff.minus" = "red"
