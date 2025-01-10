@@ -34,7 +34,7 @@ whiskers:
 
 "string" = "green"
 "string.regexp" = "pink"
-"string.special" = "blue"
+"string.special" = "pink"
 "string.special.symbol" = "red"
 
 "comment" = { fg = "overlay2"{{ self::modifiers() }} }
