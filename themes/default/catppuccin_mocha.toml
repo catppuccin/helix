@@ -97,7 +97,7 @@
 "ui.cursor.primary" = { fg = "base", bg = "rosewater" }
 "ui.cursor.match" = { fg = "peach", modifiers = ["bold"] }
 
-"ui.cursor.primary.normal" = { fg = "base", bg = "lavender" }
+"ui.cursor.primary.normal" = { fg = "base", bg = "rosewater" }
 "ui.cursor.primary.insert" = { fg = "base", bg = "green" }
 "ui.cursor.primary.select" = { fg = "base", bg = "flamingo" }
 
@@ -152,5 +152,5 @@ crust = "#11111b"
 
 cursorline = "#2a2b3c"
 secondary_cursor = "#b5a6a8"
-secondary_cursor_normal = "#878ec0"
+secondary_cursor_normal = "#b5a6a8"
 secondary_cursor_insert = "#7ea87f"
