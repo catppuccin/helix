@@ -1,0 +1,40 @@
+name: Visual Diff
+
+on:
+  push:
+    branches:
+      - "**"
+      - "!main"
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Install the latest version of uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          version: "latest"
+
+      - name: Run helix-hl-diff
+        run: uvx --from git+https://github.com/backwardspy/helix-hl-diff helix_hl_diff
+        env:
+          CMP_BRANCH: "${{ github.head_ref || github.ref_name }}"
+
+      - name: Check for diff images
+        id: check_diffs
+        run: |
+          if (Test-Path "output/diffs/*.png") {
+            echo "DIFFS_FOUND=true" >> $env:GITHUB_ENV
+          } else {
+            echo "No diff images found."
+            exit 0
+          }
+
+      - name: Upload diffs as artifacts
+        if: env.DIFFS_FOUND == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-diffs
+          path: output/diffs/*.png
+          retention-days: 5
