@@ -17,7 +17,7 @@ jobs:
           version: "latest"
 
       - name: Run helix-hl-diff
-        run: uvx --from git+https://github.com/backwardspy/helix-hl-diff helix_hl_diff
+        run: uvx --from git+https://github.com/backwardspy/helix-hl-diff helix-hl-diff
         env:
           CMP_BRANCH: "${{ github.head_ref || github.ref_name }}"
 
