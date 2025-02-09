@@ -1,10 +1,9 @@
 name: Visual Diff
 
 on:
-  push:
-    branches:
-      - "**"
-      - "!main"
+  pull_request:
+    paths:
+      - "themes/**/*.toml"
 
 jobs:
   build:
@@ -20,7 +19,8 @@ jobs:
         run: uvx --from git+https://github.com/backwardspy/helix-hl-diff helix-hl-diff
         env:
           REPO_NAME: ${{ github.repository }}
-          CMP_BRANCH: "${{ github.head_ref || github.ref_name }}"
+          BASE_BRANCH: "${{ github.base_ref }}"
+          CMP_BRANCH: "${{ github.head_ref }}"
 
       - name: Check for diff images
         id: check_diffs
@@ -32,10 +32,18 @@ jobs:
             exit 0
           }
 
-      - name: Upload diffs as artifacts
+      - name: Upload failed tests
         if: env.DIFFS_FOUND == 'true'
-        uses: actions/upload-artifact@v4
+        uses: edunad/actions-image@v2.0.3
         with:
-          name: visual-diffs
-          path: output/**/diffs/*.png
-          retention-days: 5
+          path: "output/**/diffs/*.png"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          title: "Visual Diff"
+
+      # - name: Upload diffs as artifacts
+      #   if: env.DIFFS_FOUND == 'true'
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: visual-diffs
+      #     path: output/**/diffs/*.png
+      #     retention-days: 5
