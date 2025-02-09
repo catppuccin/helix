@@ -1,0 +1,49 @@
+name: Visual Diff
+
+on:
+  pull_request:
+    paths:
+      - "themes/**/*.toml"
+
+permissions:
+  contents: write
+  actions: write
+  checks: write
+  pull-requests: write
+  discussions: write
+  issues: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Install the latest version of uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          version: "latest"
+
+      - name: Run helix-hl-diff
+        run: uvx --from git+https://github.com/backwardspy/helix-hl-diff helix-hl-diff
+        env:
+          REPO_NAME: ${{ github.repository }}
+          BASE_BRANCH: "${{ github.base_ref }}"
+          CMP_BRANCH: "${{ github.head_ref }}"
+
+      - name: Check for diff images
+        id: check_diffs
+        run: |
+          if (Test-Path "output/**/diffs/*.png") {
+            echo "DIFFS_FOUND=true" >> $env:GITHUB_ENV
+          } else {
+            echo "No diff images found."
+            exit 0
+          }
+
+      - name: Upload visual diffs
+        if: env.DIFFS_FOUND == 'true'
+        uses: edunad/actions-image@v2.0.3
+        with:
+          path: "output/**/diffs/*.png"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          title: "Visual Diff"
