@@ -19,6 +19,7 @@ jobs:
       - name: Run helix-hl-diff
         run: uvx --from git+https://github.com/backwardspy/helix-hl-diff helix-hl-diff
         env:
+          REPO_NAME: ${{ github.repository }}
           CMP_BRANCH: "${{ github.head_ref || github.ref_name }}"
 
       - name: Check for diff images
