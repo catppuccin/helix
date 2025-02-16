@@ -55,6 +55,7 @@
 "markup.italic" = { fg = "red", modifiers = ["italic"] }
 "markup.link.url" = { fg = "blue", modifiers = ["italic", "underlined"] }
 "markup.link.text" = "lavender"
+"markup.link.label" = "sapphire"
 "markup.raw" = "green"
 "markup.quote" = "pink"
 
