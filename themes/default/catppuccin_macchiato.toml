@@ -107,7 +107,7 @@
 
 "ui.cursor.normal" = { fg = "base", bg = "secondary_cursor_normal" }
 "ui.cursor.insert" = { fg = "base", bg = "secondary_cursor_insert" }
-"ui.cursor.select" = { fg = "base", bg = "secondary_cursor" }
+"ui.cursor.select" = { fg = "base", bg = "secondary_cursor_select" }
 
 "ui.cursorline.primary" = { bg = "cursorline" }
 
@@ -157,5 +157,6 @@ crust = "#181926"
 
 cursorline = "#303347"
 secondary_cursor = "#b6a6a7"
+secondary_cursor_select = "#8b91bf"
 secondary_cursor_normal = "#b6a6a7"
 secondary_cursor_insert = "#80a57a"
