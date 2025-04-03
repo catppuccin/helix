@@ -128,7 +128,7 @@ whiskers:
 
 "ui.cursor.normal" = { fg = "base", bg = "secondary_cursor_normal" }
 "ui.cursor.insert" = { fg = "base", bg = "secondary_cursor_insert" }
-"ui.cursor.select" = { fg = "base", bg = "secondary_cursor" }
+"ui.cursor.select" = { fg = "base", bg = "secondary_cursor_select" }
 
 "ui.cursorline.primary" = { bg = "cursorline" }
 
@@ -155,5 +155,6 @@ hint = "teal"
 
 cursorline = "#{% if flavor.dark %}{{ surface0 | mix(color=base, amount=0.64) | get(key="hex") }}{% else %}{{ mantle | mix(color=base, amount=0.7) | get(key="hex") }}{% endif %}"
 secondary_cursor = "#{{ rosewater | mix(color=base, amount=0.7) | get(key="hex") }}"
+secondary_cursor_select = "#{{ lavender | mix(color=base, amount=0.7) | get(key="hex") }}"
 secondary_cursor_normal = "#{{ rosewater | mix(color=base, amount=0.7) | get(key="hex") }}"
 secondary_cursor_insert = "#{{ green | mix(color=base, amount=0.7) | get(key="hex") }}"
