@@ -142,6 +142,7 @@ whiskers:
 "diagnostic.info" = { underline = { color = "sky", style = "curl" } }
 "diagnostic.hint" = { underline = { color = "teal", style = "curl" } }
 "diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
 
 error = "red"
 warning = "yellow"
