@@ -127,6 +127,8 @@ warning = "yellow"
 info = "sky"
 hint = "teal"
 
+rainbow = ["red", "peach", "yellow", "green", "sapphire", "lavender"]
+
 [palette]
 rosewater = "#f4dbd6"
 flamingo = "#f0c6c6"

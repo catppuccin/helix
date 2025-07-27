@@ -148,6 +148,8 @@ warning = "yellow"
 info = "sky"
 hint = "teal"
 
+rainbow = ["red", "peach", "yellow", "green", "sapphire", "lavender"]
+
 [palette]
 {%- for identifier, color in flavor.colors %}
 {{ identifier }} = "#{{ color.hex }}"
