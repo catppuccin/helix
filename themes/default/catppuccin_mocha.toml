@@ -3,6 +3,7 @@
 "attribute" = "yellow"
 
 "type" = "yellow"
+"type.builtin" = "mauve"
 "type.enum.variant" = "teal"
 
 "constructor" = "sapphire"
