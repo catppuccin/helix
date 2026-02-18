@@ -54,6 +54,7 @@
 "markup.list.checked" = "green"
 "markup.bold" = { fg = "red", modifiers = ["bold"] }
 "markup.italic" = { fg = "red", modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
 "markup.link.url" = { fg = "blue", modifiers = ["italic", "underlined"] }
 "markup.link.text" = "lavender"
 "markup.link.label" = "sapphire"
