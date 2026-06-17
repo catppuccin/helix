@@ -113,7 +113,7 @@
 
 "ui.cursorline.primary" = { bg = "cursorline" }
 
-"ui.highlight" = { bg = "surface1", modifiers = ["bold"] }
+"ui.highlight" = { bg = "overlay1", modifiers = ["bold"] }
 
 "ui.menu" = { fg = "overlay2", bg = "surface0" }
 "ui.menu.selected" = { fg = "text", bg = "surface1", modifiers = ["bold"] }
